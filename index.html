@@ -124,7 +124,7 @@
             let minutos = document.getElementById("minutos");
 
              /*let == var, var es antiguo y let es lo nuevo*/
-            let plan = document. querySelector('input[name= "plan"]:checket')
+            let plan = document. querySelector('input[name= "plan"]:checked')
             
             /*opcion 1*/
             if(plan.value == "tel" ) {
@@ -153,15 +153,29 @@
             if (nube)
                 {
                total = total
-                }
-                
+                } 
+            if(servicio){
+                total = total
+            }
             
-                
-             alert ("Tienes que pagar:" + total);
+          let paquete = document.querySelector("#seccion-paquetes select").selectedIndex;
 
+        if (paquete == 0) {
+    total = total + (total * 0 / 100);}
+
+        if (paquete == 1) {
+    total = total + (total * 15 / 100);}
+
+        if (paquete == 2) {
+    total = total + (total * 20 / 100);}
+        alert("Total a pagar: $" + total);
+
+        alert("Total a pagar: $" + total);
+
+    
+    console.log(minutos.value);
             
-            console.log(minutos.value);
-            console.log(plan.value),
+    console.log(plan.value),
 
             alert("Haz dado click en el boton calcular")
         }
